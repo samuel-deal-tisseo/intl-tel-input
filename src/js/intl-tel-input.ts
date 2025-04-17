@@ -1621,21 +1621,22 @@ export class Iti {
   }
 
   private _setSelectedCountryTitleAttribute(iso2: string | null = null, separateDialCode: boolean): void {
+    const { i18n } = this.options;
+
     if (!this.selectedCountry) {
       return;
     }
 
     let title;
-    if (iso2 && !separateDialCode) {
-      title = `${this.selectedCountryData.name}: +${this.selectedCountryData.dialCode}`;
-    } else if (iso2) {
-      //* For screen reader output, we don't want to include the dial code in the reader output twice
-      //* so just use the selected country name here:
-      title = this.selectedCountryData.name;
+    const country = iso2 ? this.selectedCountryData.name : "Unknown";
+    if(i18n.selectedCountryTitle) {
+      title = i18n.selectedCountryTitle.replace("${country}", country);
     } else {
-      title = "Unknown";
+      title = country;
     }
-
+    if(iso2 && !separateDialCode) {
+      title += ": +"+this.selectedCountryData.dialCode;
+    }
     this.selectedCountry.setAttribute("title", title);
   }
 

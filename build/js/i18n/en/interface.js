@@ -1,5 +1,6 @@
 const interfaceTranslations = {
   selectedCountryAriaLabel: "Selected country",
+  selectedCountryTitle: "${country} international telephone code",
   noCountrySelected: "No country selected",
   countryListAriaLabel: "List of countries",
   searchPlaceholder: "Search",

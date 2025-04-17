@@ -1581,6 +1581,7 @@ const j = {
   zw: "Zimbabwe"
 }, $ = {
   selectedCountryAriaLabel: "Selected country",
+  selectedCountryTitle: "${country} international telephone code",
   noCountrySelected: "No country selected",
   countryListAriaLabel: "List of countries",
   searchPlaceholder: "Search",
@@ -2241,10 +2242,12 @@ class G {
         this.maxCoreNumberLength = null;
   }
   _setSelectedCountryTitleAttribute(t = null, e) {
+    const { i18n: i } = this.options;
     if (!this.selectedCountry)
       return;
-    let i;
-    t && !e ? i = `${this.selectedCountryData.name}: +${this.selectedCountryData.dialCode}` : t ? i = this.selectedCountryData.name : i = "Unknown", this.selectedCountry.setAttribute("title", i);
+    let s;
+    const n = t ? this.selectedCountryData.name : "Unknown";
+    i.selectedCountryTitle ? s = i.selectedCountryTitle.replace("${country}", n) : s = n, t && !e && (s += ": +" + this.selectedCountryData.dialCode), this.selectedCountry.setAttribute("title", s);
   }
   //* When the input is in a hidden container during initialisation, we must inject some markup
   //* into the end of the DOM to calculate the correct offsetWidth.

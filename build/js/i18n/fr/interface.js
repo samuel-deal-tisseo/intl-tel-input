@@ -1,5 +1,6 @@
 const interfaceTranslations = {
   selectedCountryAriaLabel: "Pays sélectionné",
+  selectedCountryTitle: "Indicatif téléphonique international ${country}",
   noCountrySelected: "Aucun pays sélectionné",
   countryListAriaLabel: "Liste des pays",
   searchPlaceholder: "Recherche",
