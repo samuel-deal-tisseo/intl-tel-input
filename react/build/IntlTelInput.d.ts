@@ -258,6 +258,7 @@ declare module "intl-tel-input/i18n/types" {
         zw?: string;
         ax?: string;
         selectedCountryAriaLabel?: string;
+        selectedCountryTitle?: string;
         searchPlaceholder?: string;
         countryListAriaLabel?: string;
         oneSearchResult?: string;

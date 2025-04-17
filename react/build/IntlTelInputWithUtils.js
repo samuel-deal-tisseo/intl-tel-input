@@ -1589,6 +1589,7 @@ var countries_default = countryTranslations;
 // src/js/intl-tel-input/i18n/en/interface.ts
 var interfaceTranslations = {
   selectedCountryAriaLabel: "Selected country",
+  selectedCountryTitle: "{country} international telephone code",
   noCountrySelected: "No country selected",
   countryListAriaLabel: "List of countries",
   searchPlaceholder: "Search",
@@ -2685,16 +2686,19 @@ var Iti = class {
     }
   }
   _setSelectedCountryTitleAttribute(iso2 = null, separateDialCode) {
+    const { i18n } = this.options;
     if (!this.selectedCountry) {
       return;
     }
     let title;
-    if (iso2 && !separateDialCode) {
-      title = `${this.selectedCountryData.name}: +${this.selectedCountryData.dialCode}`;
-    } else if (iso2) {
-      title = this.selectedCountryData.name;
+    const country = iso2 ? this.selectedCountryData.name : "Unknown";
+    if (i18n.selectedCountryTitle) {
+      title = i18n.selectedCountryTitle.replace("${country}", country);
     } else {
-      title = "Unknown";
+      title = country;
+    }
+    if (iso2 && !separateDialCode) {
+      title += ": +" + this.selectedCountryData.dialCode;
     }
     this.selectedCountry.setAttribute("title", title);
   }

@@ -244,10 +244,12 @@ export type I18n = {
   zw?: string;
   ax?: string;
   selectedCountryAriaLabel?: string;
+  selectedCountryTitle?: string;
   searchPlaceholder?: string;
   countryListAriaLabel?: string;
   oneSearchResult?: string;
   multipleSearchResults?: string;
   noCountrySelected?: string;
   zeroSearchResults?: string;
+
 };
