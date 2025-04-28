@@ -109,3 +109,13 @@ build({
   entryPoints: ["src/js/intl-tel-input/i18n/**/*.ts"],
   outdir: "build/js/i18n",
 });
+
+//* build/js/i18n_browser_local
+build({
+  bundle: true,
+  charset: "utf8",
+  globalName: "allTranslations",
+  format: "iife",
+  entryPoints: ["src/js/intl-tel-input/i18n/**/index.ts"],
+  outdir: "build/js/i18n_browser_local",
+});
