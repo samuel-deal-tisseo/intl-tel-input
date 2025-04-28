@@ -1,4 +1,4 @@
-export type I18n = {
+export type I18nCountry = {
   af?: string;
   al?: string;
   dz?: string;
@@ -243,6 +243,9 @@ export type I18n = {
   zm?: string;
   zw?: string;
   ax?: string;
+}
+
+export type I18n = I18nCountry & {
   selectedCountryAriaLabel?: string;
   selectedCountryTitle?: string;
   searchPlaceholder?: string;
@@ -251,5 +254,5 @@ export type I18n = {
   multipleSearchResults?: string;
   noCountrySelected?: string;
   zeroSearchResults?: string;
-
+  countryNativeNames?: I18nCountry;
 };

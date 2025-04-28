@@ -75,6 +75,7 @@ interface AllOptions {
   initialCountry: string;
   loadUtils: UtilsLoader;
   nationalMode: boolean;
+  nativeCountryName: boolean;
   onlyCountries: string[];
   placeholderNumberType: NumberType;
   showFlags: boolean;
@@ -124,6 +125,8 @@ const defaults: AllOptions = {
   loadUtils: null,
   //* National vs international formatting for numbers e.g. placeholders and displaying existing numbers.
   nationalMode: true,
+  //* Show native country name after localized name
+  nativeCountryName: false,
   //* Display only these countries.
   onlyCountries: [],
   //* Number type to use for placeholders.
@@ -477,6 +480,13 @@ export class Iti {
       const iso2 = this.countries[i].iso2.toLowerCase();
       if (this.options.i18n.hasOwnProperty(iso2)) {
         this.countries[i].name = this.options.i18n[iso2];
+        if(this.options.nativeCountryName
+            && this.options.i18n.hasOwnProperty("countryNativeNames")
+            && this.options.i18n.countryNativeNames.hasOwnProperty(iso2)
+            && (this.countries[i].name != this.options.i18n.countryNativeNames[iso2])
+          ) {
+          this.countries[i].name += " ("+this.options.i18n.countryNativeNames[iso2]+")";
+        }
       }
     }
   }
