@@ -1,7 +1,7 @@
 //* THIS FILE IS AUTO-GENERATED. DO NOT EDIT.
-import { I18n } from "../types";
+import { I18nCountry } from "../types";
 
-const countryTranslations: I18n = {
+const countryTranslations: I18nCountry = {
   ad: "安道尔",
   ae: "阿拉伯联合酋长国",
   af: "阿富汗",
