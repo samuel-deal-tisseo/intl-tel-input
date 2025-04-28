@@ -335,6 +335,10 @@ If you want more control over when this file is lazy loaded, you can manually in
 Type: `Boolean` Default: `true`  
 Format numbers in the national format, rather than the international format. This applies to placeholder numbers, and when displaying users' existing numbers. Note that it's fine for users to type their numbers in national format - as long as they have selected the right country, you can use `getNumber` to extract a full international number - [see example](https://intl-tel-input.com/examples/national-mode.html). It is recommended to leave this option enabled, to encourage users to enter their numbers in national format as this is usually more familiar to them and so it creates a better user experience.
 
+**nativeCountryName**
+Type: `Boolean` Default: `false`  
+Show the native name of country after the localized name
+
 **onlyCountries**  
 Type: `Array` Default: `[]`  
 In the dropdown, display only the countries you specify - [see example](https://intl-tel-input.com/examples/only-countries.html).

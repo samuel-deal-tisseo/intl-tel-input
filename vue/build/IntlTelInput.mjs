@@ -1,5 +1,5 @@
-import { mergeModels as D, useModel as x, ref as L, onMounted as E, watch as M, onUnmounted as F, withDirectives as B, openBlock as V, createElementBlock as z, mergeProps as O, vModelText as R } from "vue";
-const N = [
+import { mergeModels as N, useModel as M, ref as L, onMounted as x, watch as E, onUnmounted as z, withDirectives as B, openBlock as j, createElementBlock as R, mergeProps as F, vModelText as V } from "vue";
+const k = [
   [
     "af",
     // Afghanistan
@@ -1323,8 +1323,8 @@ const N = [
     "263"
   ]
 ], I = [];
-for (let u = 0; u < N.length; u++) {
-  const t = N[u];
+for (let u = 0; u < k.length; u++) {
+  const t = k[u];
   I[u] = {
     name: "",
     // this is now populated in the plugin
@@ -1336,7 +1336,7 @@ for (let u = 0; u < N.length; u++) {
     nationalPrefix: t[4] || null
   };
 }
-const j = {
+const O = {
   ad: "Andorra",
   ae: "United Arab Emirates",
   af: "Afghanistan",
@@ -1579,7 +1579,251 @@ const j = {
   za: "South Africa",
   zm: "Zambia",
   zw: "Zimbabwe"
-}, $ = {
+}, G = {
+  ad: "Andorra",
+  ae: "الإمارات العربية المتحدة",
+  af: "افغانستان",
+  ag: "Antigua & Barbuda",
+  ai: "Anguilla",
+  al: "Shqipëri",
+  am: "Հայաստան",
+  ao: "Angóla",
+  ar: "Argentina",
+  as: "American Samoa",
+  at: "Österreich",
+  au: "Australia",
+  aw: "Aruba",
+  ax: "Åland",
+  az: "Azərbaycan",
+  ba: "Bosna i Hercegovina",
+  bb: "Barbados",
+  bd: "বাংলাদেশ",
+  be: "Belgien, Belgique, België",
+  bf: "Burkibaa Faaso",
+  bg: "България",
+  bh: "البحرين",
+  bi: "Uburundi",
+  bj: "Bénin, Orílɛ́ède Bɛ̀nɛ̀",
+  bl: "Saint-Barthélemy",
+  bm: "Bermuda",
+  bn: "Brunei",
+  bo: "Bolivia",
+  bq: "Caribisch Nederland",
+  br: "Brasil",
+  bs: "Bahamas",
+  bt: "འབྲུག",
+  bw: "Botswana",
+  by: "Беларусь",
+  bz: "Belice",
+  ca: "Canada",
+  cc: "Cocos (Keeling) Islands",
+  cd: "Congo-Kinshasa, Republíki ya Kongó Demokratíki, Ditunga wa Kongu, Jamhuri ya Kidemokrasia ya Kongo",
+  cf: "République centrafricaine, Repibiki ya Afríka ya Káti, Ködörösêse tî Bêafrîka",
+  cg: "Congo-Brazzaville, Kongo",
+  ch: "Schweiz, Suisse, Svizzera, Suíça, Svizra",
+  ci: "Côte d’Ivoire",
+  ck: "Cook Islands",
+  cl: "Chile",
+  cm: "Kameruun, Cameroun",
+  cn: "རྒྱ་ནག, ꍏꇩ, جۇڭگو, 中国",
+  co: "Colombia",
+  cr: "Costa Rica",
+  cu: "Cuba",
+  cv: "Cabo Verde",
+  cw: "Curaçao",
+  cx: "Christmas Island",
+  cy: "Κύπρος, Kıbrıs",
+  cz: "Česko",
+  de: "Deutschland",
+  dj: "جيبوتي, Jabuuti",
+  dk: "Danmark",
+  dm: "Dominica",
+  do: "República Dominicana",
+  dz: "الجزائر, Algérie",
+  ec: "Ecuador",
+  ee: "Eesti",
+  eg: "مصر",
+  eh: "الصحراء الغربية",
+  er: "إريتريا, ኤርትራ",
+  es: "España",
+  et: "ኢትዮጵያ, Itoophiyaa, Itoobiya",
+  fi: "Suomi",
+  fj: "Fiji",
+  fk: "Falkland Islands",
+  fm: "Micronesia",
+  fo: "Føroyar",
+  fr: "France",
+  ga: "Gabon",
+  gb: "Y Deyrnas Unedig, an Ríocht Aontaithe, An Rìoghachd Aonaichte, Rywvaneth Unys",
+  gd: "Grenada",
+  ge: "საქართველო, Гуырдзыстон",
+  gf: "Guyane française",
+  gg: "Guernsey",
+  gh: "Gaana, Ghana nutome, Ganaa, Gana",
+  gi: "Gibraltar",
+  gl: "Grønland, Kalaallit Nunaat",
+  gm: "Gammbi",
+  gn: "Gine, Guinée",
+  gp: "Guadeloupe",
+  gq: "Guinea Ecuatorial, Guinée équatoriale, Guiné Equatorial",
+  gr: "Ελλάδα",
+  gt: "Guatemala",
+  gu: "Guam",
+  gw: "Gine-Bisaawo, Guiné-Bissau",
+  gy: "Guyana",
+  hk: "中國香港特別行政區",
+  hn: "Honduras",
+  hr: "Hrvatska",
+  ht: "Haïti",
+  hu: "Magyarország",
+  id: "Indonesia",
+  ie: "Éire",
+  il: "إسرائيل, ישראל",
+  im: "Ellan Vannin",
+  in: "ভাৰত, ভারত, རྒྱ་གར་, ભારત, भारत, ಭಾರತ, ہِندوستان, ഇന്ത്യ, ଭାରତ, ਭਾਰਤ, இந்தியா, భారతదేశం, بھارت",
+  io: "British Indian Ocean Territory",
+  iq: "العراق",
+  ir: "ایران",
+  is: "Ísland",
+  it: "Italia",
+  je: "Jersey",
+  jm: "Jamaica",
+  jo: "الأردن",
+  jp: "日本",
+  ke: "Keeniyaa",
+  kg: "Кыргызстан, Киргизия",
+  kh: "កម្ពុជា",
+  ki: "Kiribati",
+  km: "جزر القمر, Comores",
+  kn: "St. Kitts & Nevis",
+  kp: "조선민주주의인민공화국",
+  kr: "대한민국",
+  kw: "الكويت",
+  ky: "Cayman Islands",
+  kz: "Қазақстан, Казахстан",
+  la: "ລາວ",
+  lb: "لبنان",
+  lc: "St. Lucia",
+  li: "Liechtenstein",
+  lk: "ශ්‍රී ලංකාව, இலங்கை",
+  lr: "Liberiyaa",
+  ls: "Lesotho",
+  lt: "Lietuva",
+  lu: "Luxemburg, Lëtzebuerg, Luxemburgo",
+  lv: "Latvija",
+  ly: "ليبيا",
+  ma: "المغرب, Maroc",
+  mc: "Monaco",
+  md: "Republica Moldova, Молдова",
+  me: "Crna Gora",
+  mf: "Saint-Martin",
+  mg: "Madagasikara",
+  mh: "Marshall Islands",
+  mk: "Северна Македонија",
+  ml: "Mali",
+  mm: "မြန်မာ",
+  mn: "Монгол",
+  mo: "Macau, RAE da China, 中國澳門特別行政區",
+  mp: "Northern Mariana Islands",
+  mq: "Martinique",
+  mr: "موريتانيا, Muritani, Mauritanie",
+  ms: "Montserrat",
+  mt: "Malta",
+  mu: "Maurice",
+  mv: "Maldives",
+  mw: "Malawi",
+  mx: "México",
+  my: "மலேசியா",
+  mz: "Moçambique",
+  na: "Namibië",
+  nc: "Nouvelle-Calédonie",
+  ne: "Nijeer, Nijar",
+  nf: "Norfolk Island",
+  ng: "Nijeriyaa, Najeriya, Naịjịrịa, Orilẹ̀-èdè Nàìjíríà",
+  ni: "Nicaragua",
+  nl: "Nederland",
+  no: "Norge",
+  np: "नेपाल",
+  nr: "Nauru",
+  nu: "Niue",
+  nz: "Aotearoa",
+  om: "عُمان",
+  pa: "Panamá",
+  pe: "Perú",
+  pf: "Polynésie française",
+  pg: "Papua New Guinea",
+  ph: "Filipinas",
+  pk: "پاکستان, پاڪستان",
+  pl: "Polska",
+  pm: "Saint-Pierre-et-Miquelon",
+  pr: "Puerto Rico",
+  ps: "الأراضي الفلسطينية",
+  pt: "Portugal",
+  pw: "Palau",
+  py: "Paraguay",
+  qa: "قطر",
+  re: "La Réunion",
+  ro: "România",
+  rs: "Србија",
+  ru: "Россия",
+  rw: "U Rwanda",
+  sa: "المملكة العربية السعودية",
+  sb: "Solomon Islands",
+  sc: "Seychelles",
+  sd: "السودان",
+  se: "Ruoŧŧa",
+  sg: "Singapura, சிங்கப்பூர், 新加坡",
+  sh: "St. Helena",
+  si: "Slovenija",
+  sj: "Svalbard og Jan Mayen",
+  sk: "Slovensko",
+  sl: "Seraa liyon",
+  sm: "San Marino",
+  sn: "Senegaal, Sénégal",
+  so: "Soomaaliya",
+  sr: "Suriname",
+  ss: "جنوب السودان",
+  st: "São Tomé e Príncipe",
+  sv: "El Salvador",
+  sx: "Sint-Maarten",
+  sy: "سوريا, Syrie",
+  sz: "Eswatini",
+  tc: "Turks & Caicos Islands",
+  td: "تشاد, Tchad",
+  tg: "Togo nutome",
+  th: "ไทย",
+  tj: "Тоҷикистон",
+  tk: "Tokelau",
+  tl: "Timor-Leste",
+  tm: "Türkmenistan",
+  tn: "تونس, Tunisie",
+  to: "Tonga",
+  tr: "Türkiye",
+  tt: "Trinidad & Tobago",
+  tv: "Tuvalu",
+  tw: "台灣",
+  tz: "Tanzania",
+  ua: "Украина, Україна",
+  ug: "Yuganda",
+  us: "Estados Unidos",
+  uy: "Uruguay",
+  uz: "Oʻzbekiston",
+  va: "Città del Vaticano",
+  vc: "St. Vincent & Grenadines",
+  ve: "Venezuela",
+  vg: "British Virgin Islands",
+  vi: "U.S. Virgin Islands",
+  vn: "Việt Nam",
+  vu: "Vanuatu",
+  wf: "Wallis-et-Futuna",
+  ws: "Samoa",
+  xk: "Kosovë, Косово",
+  ye: "اليمن",
+  yt: "Mayotte",
+  za: "Suid-Afrika, eMzantsi Afrika, iNingizimu Afrika",
+  zm: "Zambia",
+  zw: "Zimbabwe"
+}, K = {
   selectedCountryAriaLabel: "Selected country",
   selectedCountryTitle: "${country} international telephone code",
   noCountrySelected: "No country selected",
@@ -1591,9 +1835,9 @@ const j = {
   // additional countries (not supported by country-list library)
   ac: "Ascension Island",
   xk: "Kosovo"
-}, k = { ...j, ...$ };
+}, A = { countryNativeNames: G, ...O, ...K };
 for (let u = 0; u < I.length; u++)
-  I[u].name = k[I[u].iso2];
+  I[u].name = A[I[u].iso2];
 let U = 0;
 const T = {
   //* Whether or not to allow the dropdown.
@@ -1630,6 +1874,8 @@ const T = {
   loadUtils: null,
   //* National vs international formatting for numbers e.g. placeholders and displaying existing numbers.
   nationalMode: !0,
+  //* Show native country name after localized name
+  nativeCountryName: !1,
   //* Display only these countries.
   onlyCountries: [],
   //* Number type to use for placeholders.
@@ -1650,7 +1896,7 @@ const T = {
   ) : !1,
   //* The number type to enforce during validation.
   validationNumberTypes: ["MOBILE"]
-}, H = [
+}, $ = [
   "800",
   "822",
   "833",
@@ -1668,14 +1914,14 @@ const T = {
   "887",
   "888",
   "889"
-], v = (u) => u.replace(/\D/g, ""), A = (u = "") => u.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(), S = (u) => {
+], v = (u) => u.replace(/\D/g, ""), D = (u = "") => u.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(), S = (u) => {
   const t = v(u);
   if (t.charAt(0) === "1") {
     const e = t.substr(1, 3);
-    return H.includes(e);
+    return $.includes(e);
   }
   return !1;
-}, K = (u, t, e, i) => {
+}, H = (u, t, e, i) => {
   if (e === 0 && !i)
     return 0;
   let s = 0;
@@ -1693,7 +1939,7 @@ const T = {
   const { instances: e } = l;
   Object.values(e).forEach((i) => i[u](...t));
 };
-class G {
+class q {
   constructor(t, e = {}) {
     this.id = U++, this.telInput = t, this.highlightedItem = null, this.options = Object.assign({}, T, e), this.hadInitialPlaceholder = !!t.getAttribute("placeholder");
   }
@@ -1701,7 +1947,7 @@ class G {
   _init() {
     this.options.useFullscreenPopup && (this.options.fixDropdownWidth = !1), this.options.onlyCountries.length === 1 && (this.options.initialCountry = this.options.onlyCountries[0]), this.options.separateDialCode && (this.options.nationalMode = !1), this.options.allowDropdown && !this.options.showFlags && !this.options.separateDialCode && (this.options.nationalMode = !1), this.options.useFullscreenPopup && !this.options.dropdownContainer && (this.options.dropdownContainer = document.body), this.isAndroid = typeof navigator < "u" ? /Android/i.test(navigator.userAgent) : !1, this.isRTL = !!this.telInput.closest("[dir=rtl]");
     const t = this.options.allowDropdown || this.options.separateDialCode;
-    this.showSelectedCountryOnLeft = this.isRTL ? !t : t, this.options.separateDialCode && (this.isRTL ? this.originalPaddingRight = this.telInput.style.paddingRight : this.originalPaddingLeft = this.telInput.style.paddingLeft), this.options.i18n = { ...k, ...this.options.i18n };
+    this.showSelectedCountryOnLeft = this.isRTL ? !t : t, this.options.separateDialCode && (this.isRTL ? this.originalPaddingRight = this.telInput.style.paddingRight : this.originalPaddingLeft = this.telInput.style.paddingLeft), this.options.i18n = { ...A, ...this.options.i18n };
     const e = new Promise((s, n) => {
       this.resolveAutoCountryPromise = s, this.rejectAutoCountryPromise = n;
     }), i = new Promise((s, n) => {
@@ -1761,7 +2007,7 @@ class G {
   _translateCountryNames() {
     for (let t = 0; t < this.countries.length; t++) {
       const e = this.countries[t].iso2.toLowerCase();
-      this.options.i18n.hasOwnProperty(e) && (this.countries[t].name = this.options.i18n[e]);
+      this.options.i18n.hasOwnProperty(e) && (this.countries[t].name = this.options.i18n[e], this.options.nativeCountryName && this.options.i18n.countryNativeNames.hasOwnProperty(e) && (this.countries[t].name += "(" + this.options.i18n.countryNativeNames[e] + ")"));
     }
   }
   //* Generate this.dialCodes and this.dialCodeToIso2Map.
@@ -1788,7 +2034,7 @@ class G {
   }
   //* Generate all of the markup for the plugin: the selected country overlay, and the dropdown.
   _generateMarkup() {
-    var h, m, b;
+    var h, C, b;
     this.telInput.classList.add("iti__tel-input"), !this.telInput.hasAttribute("autocomplete") && !(this.telInput.form && this.telInput.form.hasAttribute("autocomplete")) && this.telInput.setAttribute("autocomplete", "off");
     const {
       allowDropdown: t,
@@ -1802,9 +2048,9 @@ class G {
       countrySearch: c,
       i18n: d
     } = this.options;
-    let C = "iti";
-    t && (C += " iti--allow-dropdown"), i && (C += " iti--show-flags"), s && (C += ` ${s}`), a || (C += " iti--inline-dropdown");
-    const p = y("div", { class: C });
+    let m = "iti";
+    t && (m += " iti--allow-dropdown"), i && (m += " iti--show-flags"), s && (m += ` ${s}`), a || (m += " iti--inline-dropdown");
+    const p = y("div", { class: m });
     if ((h = this.telInput.parentNode) == null || h.insertBefore(p, this.telInput), t || i || e) {
       this.countryContainer = y(
         "div",
@@ -1841,10 +2087,10 @@ class G {
         { class: "iti__selected-dial-code" },
         this.selectedCountry
       )), t) {
-        const f = r ? "" : "iti--flexible-dropdown-width";
+        const g = r ? "" : "iti--flexible-dropdown-width";
         if (this.dropdownContent = y("div", {
           id: `iti-${this.id}__dropdown-content`,
-          class: `iti__dropdown-content iti__hide ${f}`
+          class: `iti__dropdown-content iti__hide ${g}`
         }), c && (this.searchInput = y(
           "input",
           {
@@ -1873,26 +2119,26 @@ class G {
           },
           this.dropdownContent
         ), this._appendListItems(), c && this._updateSearchResultsText(), o) {
-          let g = "iti iti--container";
-          a ? g += " iti--fullscreen-popup" : g += " iti--inline-dropdown", this.dropdown = y("div", { class: g }), this.dropdown.appendChild(this.dropdownContent);
+          let f = "iti iti--container";
+          a ? f += " iti--fullscreen-popup" : f += " iti--inline-dropdown", this.dropdown = y("div", { class: f }), this.dropdown.appendChild(this.dropdownContent);
         } else
           this.countryContainer.appendChild(this.dropdownContent);
       }
     }
     if (p.appendChild(this.telInput), this._updateInputPadding(), n) {
-      const _ = this.telInput.getAttribute("name") || "", f = n(_);
-      if (f.phone) {
-        const g = (m = this.telInput.form) == null ? void 0 : m.querySelector(`input[name="${f.phone}"]`);
-        g ? this.hiddenInput = g : (this.hiddenInput = y("input", {
+      const _ = this.telInput.getAttribute("name") || "", g = n(_);
+      if (g.phone) {
+        const f = (C = this.telInput.form) == null ? void 0 : C.querySelector(`input[name="${g.phone}"]`);
+        f ? this.hiddenInput = f : (this.hiddenInput = y("input", {
           type: "hidden",
-          name: f.phone
+          name: g.phone
         }), p.appendChild(this.hiddenInput));
       }
-      if (f.country) {
-        const g = (b = this.telInput.form) == null ? void 0 : b.querySelector(`input[name="${f.country}"]`);
-        g ? this.hiddenInputCountry = g : (this.hiddenInputCountry = y("input", {
+      if (g.country) {
+        const f = (b = this.telInput.form) == null ? void 0 : b.querySelector(`input[name="${g.country}"]`);
+        f ? this.hiddenInputCountry = f : (this.hiddenInputCountry = y("input", {
           type: "hidden",
-          name: f.country
+          name: g.country
         }), p.appendChild(this.hiddenInputCountry));
       }
     }
@@ -1926,8 +2172,8 @@ class G {
     if (o && !r)
       this._updateCountryFromNumber(n);
     else if (!d || t) {
-      const C = a ? a.toLowerCase() : "";
-      C && this._getCountryData(C, !0) ? this._setCountry(C) : o && r ? this._setCountry("us") : this._setCountry();
+      const m = a ? a.toLowerCase() : "";
+      m && this._getCountryData(m, !0) ? this._setCountry(m) : o && r ? this._setCountry("us") : this._setCountry();
     }
     n && this._updateValFromNumber(n);
   }
@@ -1990,17 +2236,17 @@ class G {
     let r = !1;
     new RegExp("\\p{L}", "u").test(this.telInput.value) && (r = !0), this._handleInputEvent = (a) => {
       if (this.isAndroid && (a == null ? void 0 : a.data) === "+" && i && n && o) {
-        const p = this.telInput.selectionStart || 0, h = this.telInput.value.substring(0, p - 1), m = this.telInput.value.substring(p);
-        this.telInput.value = h + m, this._openDropdownWithPlus();
+        const p = this.telInput.selectionStart || 0, h = this.telInput.value.substring(0, p - 1), C = this.telInput.value.substring(p);
+        this.telInput.value = h + C, this._openDropdownWithPlus();
         return;
       }
       this._updateCountryFromNumber(this.telInput.value) && this._triggerCountryChange();
       const c = (a == null ? void 0 : a.data) && /[^+0-9]/.test(a.data), d = (a == null ? void 0 : a.inputType) === "insertFromPaste" && this.telInput.value;
       c || d && !t ? r = !0 : /[^+0-9]/.test(this.telInput.value) || (r = !1);
-      const C = (a == null ? void 0 : a.detail) && a.detail.isSetNumber && !s;
-      if (e && !r && !C) {
-        const p = this.telInput.selectionStart || 0, m = this.telInput.value.substring(0, p).replace(/[^+0-9]/g, "").length, b = (a == null ? void 0 : a.inputType) === "deleteContentForward", _ = this._formatNumberAsYouType(), f = K(m, _, p, b);
-        this.telInput.value = _, this.telInput.setSelectionRange(f, f);
+      const m = (a == null ? void 0 : a.detail) && a.detail.isSetNumber && !s;
+      if (e && !r && !m) {
+        const p = this.telInput.selectionStart || 0, C = this.telInput.value.substring(0, p).replace(/[^+0-9]/g, "").length, b = (a == null ? void 0 : a.inputType) === "deleteContentForward", _ = this._formatNumberAsYouType(), g = H(C, _, p, b);
+        this.telInput.value = _, this.telInput.setSelectionRange(g, g);
       }
     }, this.telInput.addEventListener("input", this._handleInputEvent), (t || i) && (this._handleKeydownEvent = (a) => {
       if (a.key && a.key.length === 1 && !a.altKey && !a.ctrlKey && !a.metaKey) {
@@ -2009,13 +2255,13 @@ class G {
           return;
         }
         if (t) {
-          const c = this.telInput.value, d = c.charAt(0) === "+", C = !d && this.telInput.selectionStart === 0 && a.key === "+", p = /^[0-9]$/.test(a.key), h = i ? p : C || p, m = c.slice(0, this.telInput.selectionStart) + a.key + c.slice(this.telInput.selectionEnd), b = this._getFullNumber(m), _ = l.utils.getCoreNumber(b, this.selectedCountryData.iso2), f = this.maxCoreNumberLength && _.length > this.maxCoreNumberLength;
-          let g = !1;
+          const c = this.telInput.value, d = c.charAt(0) === "+", m = !d && this.telInput.selectionStart === 0 && a.key === "+", p = /^[0-9]$/.test(a.key), h = i ? p : m || p, C = c.slice(0, this.telInput.selectionStart) + a.key + c.slice(this.telInput.selectionEnd), b = this._getFullNumber(C), _ = l.utils.getCoreNumber(b, this.selectedCountryData.iso2), g = this.maxCoreNumberLength && _.length > this.maxCoreNumberLength;
+          let f = !1;
           if (d) {
             const P = this.selectedCountryData.iso2;
-            g = this._getCountryFromNumber(b) !== P;
+            f = this._getCountryFromNumber(b) !== P;
           }
-          (!h || f && !g && !C) && a.preventDefault();
+          (!h || g && !f && !m) && a.preventDefault();
         }
       }
     }, this.telInput.addEventListener("keydown", this._handleKeydownEvent));
@@ -2104,9 +2350,9 @@ class G {
   _filterCountries(t, e = !1) {
     let i = !0;
     this.countryList.innerHTML = "";
-    const s = A(t);
+    const s = D(t);
     for (let n = 0; n < this.countries.length; n++) {
-      const o = this.countries[n], r = A(o.name), a = o.name.split(/[^a-zA-ZÀ-ÿа-яА-Я]/).map((d) => d[0]).join("").toLowerCase(), c = `+${o.dialCode}`;
+      const o = this.countries[n], r = D(o.name), a = o.name.split(/[^a-zA-ZÀ-ÿа-яА-Я]/).map((d) => d[0]).join("").toLowerCase(), c = `+${o.dialCode}`;
       if (e || r.includes(s) || c.includes(s) || o.iso2.includes(s) || a.includes(s)) {
         const d = o.nodeById[this.id];
         d && this.countryList.appendChild(d), i && (this._highlightListItem(d, !1), i = !1);
@@ -2307,8 +2553,8 @@ class G {
     if (a < n)
       e.scrollTop = d;
     else if (c > o) {
-      const C = s - r;
-      e.scrollTop = d - C;
+      const m = s - r;
+      e.scrollTop = d - m;
     }
   }
   //* Replace any existing dial code with the new one
@@ -2513,7 +2759,7 @@ const W = (u) => {
   return null;
 }, l = Object.assign(
   (u, t) => {
-    const e = new G(u, t);
+    const e = new q(u, t);
     return e._init(), u.setAttribute("data-intl-tel-input-id", e.id.toString()), l.instances[e.id] = e, e;
   },
   {
@@ -2534,9 +2780,9 @@ const W = (u) => {
     startedLoadingAutoCountry: !1,
     version: "25.3.1-sam"
   }
-), J = {
+), Z = {
   __name: "IntlTelInput",
-  props: /* @__PURE__ */ D({
+  props: /* @__PURE__ */ N({
     disabled: {
       type: Boolean,
       default: !1
@@ -2560,49 +2806,49 @@ const W = (u) => {
     },
     modelModifiers: {}
   }),
-  emits: /* @__PURE__ */ D([
+  emits: /* @__PURE__ */ N([
     "changeNumber",
     "changeCountry",
     "changeValidity",
     "changeErrorCode"
   ], ["update:modelValue"]),
   setup(u, { expose: t, emit: e }) {
-    const i = x(u, "modelValue"), s = u, n = e, o = L(), r = L(), a = L(!1), c = () => r.value ? s.options.strictMode ? r.value.isValidNumberPrecise() : r.value.isValidNumber() : null, d = () => {
+    const i = M(u, "modelValue"), s = u, n = e, o = L(), r = L(), a = L(!1), c = () => r.value ? s.options.strictMode ? r.value.isValidNumberPrecise() : r.value.isValidNumber() : null, d = () => {
       let h = c();
       a.value !== h && (a.value = h, n("changeValidity", !!h), n(
         "changeErrorCode",
         h ? null : r.value.getValidationError()
       ));
-    }, C = () => {
+    }, m = () => {
       var h;
       n("changeNumber", ((h = r.value) == null ? void 0 : h.getNumber()) ?? ""), d();
     }, p = () => {
       var h;
-      n("changeCountry", ((h = r.value) == null ? void 0 : h.getSelectedCountryData().iso2) ?? ""), C(), d();
+      n("changeCountry", ((h = r.value) == null ? void 0 : h.getSelectedCountryData().iso2) ?? ""), m(), d();
     };
-    return E(() => {
+    return x(() => {
       o.value && (r.value = l(o.value, s.options), s.value && r.value.setNumber(s.value), s.disabled && r.value.setDisabled(s.disabled));
-    }), M(
+    }), E(
       () => s.disabled,
       (h) => {
-        var m;
-        return (m = r.value) == null ? void 0 : m.setDisabled(h);
+        var C;
+        return (C = r.value) == null ? void 0 : C.setDisabled(h);
       }
-    ), F(() => {
+    ), z(() => {
       var h;
       return (h = r.value) == null ? void 0 : h.destroy();
-    }), t({ instance: r, input: o }), (h, m) => B((V(), z("input", O({
+    }), t({ instance: r, input: o }), (h, C) => B((j(), R("input", F({
       ref_key: "input",
       ref: o,
-      "onUpdate:modelValue": m[0] || (m[0] = (b) => i.value = b),
+      "onUpdate:modelValue": C[0] || (C[0] = (b) => i.value = b),
       type: "tel",
       onCountrychange: p,
-      onInput: C
+      onInput: m
     }, u.inputProps), null, 16)), [
-      [R, i.value]
+      [V, i.value]
     ]);
   }
 };
 export {
-  J as default
+  Z as default
 };
