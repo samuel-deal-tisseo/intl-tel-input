@@ -258,7 +258,7 @@ module.exports = function(grunt) {
       options: {
         patterns: [
           {
-            match: /intl-tel-input@([0-9.]+)\/build/g,
+            match: /intl-tel-input@([0-9.]+(-[a-zA-Z0-9]+)?)\/build/g,
             replacement: 'intl-tel-input@<%= package.version %>/build'
           }
         ]
@@ -273,7 +273,7 @@ module.exports = function(grunt) {
       options: {
         patterns: [
           {
-            match: /e\.g\. v[0-9]+\.[0-9]+\.[0-9]+ \(please try latest version\)/,
+            match: /e\.g\. v[0-9]+\.[0-9]+\.[0-9]+(-[a-zA-Z0-9]+)? \(please try latest version\)/,
             replacement: 'e.g. v<%= package.version %> (please try latest version)'
           }
         ]

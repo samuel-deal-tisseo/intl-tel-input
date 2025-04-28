@@ -5,3 +5,6 @@
 [submodule "third_party/country-list"]
 	path = third_party/country-list
 	url = https://github.com/umpirsky/country-list
+[submodule "third_party/country-language-data"]
+	path = third_party/country-language-data
+	url = https://github.com/samuel-deal-tisseo/country-language-data.git
