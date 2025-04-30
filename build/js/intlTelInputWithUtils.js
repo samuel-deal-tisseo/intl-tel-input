@@ -2293,8 +2293,8 @@ var factoryOutput = (() => {
               this.dropdownContent
             );
             this.searchResultsA11yText = createEl(
-              "span",
-              { class: "iti__a11y-text" },
+              "div",
+              { class: "iti__a11y-text", role: "status" },
               this.dropdownContent
             );
           }
