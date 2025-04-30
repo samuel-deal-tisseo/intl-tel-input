@@ -2106,8 +2106,8 @@ class q {
           },
           this.dropdownContent
         ), this.searchResultsA11yText = y(
-          "span",
-          { class: "iti__a11y-text" },
+          "div",
+          { class: "iti__a11y-text", role: "status" },
           this.dropdownContent
         )), this.countryList = y(
           "ul",
