@@ -73,6 +73,17 @@ const getCoreNumber = (number, countryCode) => {
   }
 };
 
+//* Get the country code from the given number
+const getCountryCode = (number, countryCode) => {
+  try {
+    const phoneUtil = i18n.phonenumbers.PhoneNumberUtil.getInstance();
+    const numberObj = phoneUtil.parseAndKeepRawInput(number, countryCode);
+    return numberObj.getCountryCode();
+  } catch {
+    return "";
+  }
+};
+
 //* Get the extension from the given number
 const getExtension = (number, countryCode) => {
   try {
