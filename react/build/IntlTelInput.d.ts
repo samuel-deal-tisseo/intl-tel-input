@@ -320,6 +320,7 @@ declare module "intl-tel-input" {
         formatNumber(number: string, iso2: string | undefined, format?: number): string;
         formatNumberAsYouType(number: string, iso2: string | undefined): string;
         getCoreNumber(number: string, iso2: string | undefined): string;
+        getCountryCode(number: string, iso2: string | undefined): string;
         getExampleNumber(iso2: string | undefined, nationalMode: boolean, numberType: number, useE164?: boolean): string;
         getExtension(number: string, iso2: string | undefined): string;
         getNumberType(number: string, iso2: string | undefined): number;
