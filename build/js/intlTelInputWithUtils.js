@@ -9713,6 +9713,13 @@ var factoryOutput = (() => {
         return "";
       }
     });
+    m("intlTelInputUtilsTemp.getCountryCode", (a, b) => {
+      try {
+        return r(Y(K.g(), a, b), 1);
+      } catch {
+        return "";
+      }
+    });
     m("intlTelInputUtilsTemp.numberFormat", { E164: 0, INTERNATIONAL: 1, NATIONAL: 2, RFC3966: 3 });
     m("intlTelInputUtilsTemp.numberType", yb);
     m("intlTelInputUtilsTemp.validationError", { IS_POSSIBLE: 0, INVALID_COUNTRY_CODE: 1, TOO_SHORT: 2, TOO_LONG: 3, IS_POSSIBLE_LOCAL_ONLY: 4, INVALID_LENGTH: 5 });
