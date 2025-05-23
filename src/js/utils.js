@@ -243,6 +243,7 @@ goog.exportSymbol("intlTelInputUtilsTemp.getValidationError", getValidationError
 goog.exportSymbol("intlTelInputUtilsTemp.isValidNumber", isValidNumber);
 goog.exportSymbol("intlTelInputUtilsTemp.isPossibleNumber", isPossibleNumber);
 goog.exportSymbol("intlTelInputUtilsTemp.getCoreNumber", getCoreNumber);
+goog.exportSymbol("intlTelInputUtilsTemp.getCountryCode", getCountryCode);
 //* Enums
 goog.exportSymbol("intlTelInputUtilsTemp.numberFormat", numberFormat);
 goog.exportSymbol("intlTelInputUtilsTemp.numberType", numberType);
